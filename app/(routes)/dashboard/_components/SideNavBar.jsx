@@ -32,8 +32,8 @@ const SideNavBar = () => {
     },
     {
       id: 3,
-      name: "Availablity",
-      path: "/dashboard/availablity",
+      name: "Availability",
+      path: "/dashboard/availability",
       icon: Clock, // icon from lucid-react
     },
     // {

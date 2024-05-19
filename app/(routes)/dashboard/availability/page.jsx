@@ -16,7 +16,7 @@ import { app } from "@/config/FirebaseConfig";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { toast } from "sonner";
 
-const Availablity = () => {
+const Availability = () => {
   const [daysAvailable, setDaysAvailable] = useState([
     {
       Sunday: false,
@@ -142,4 +142,4 @@ const Availablity = () => {
   );
 };
 
-export default Availablity;
+export default Availability;
