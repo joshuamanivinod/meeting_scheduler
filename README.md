@@ -63,4 +63,7 @@ View Scheduled meetings:
 ![Screenshot 2024-05-19 at 11 31 43 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/7a30c28c-553e-47f2-93ad-6e6e20d9cf4c)
 
 
+A confirmation Email will be shared after scheduling:
+![Screenshot 2024-05-19 at 11 56 11 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/d5e0a368-ee52-46b3-b968-2e6ba51d4318)
+
 
