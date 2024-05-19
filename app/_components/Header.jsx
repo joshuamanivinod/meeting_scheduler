@@ -7,8 +7,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div>
-      <div className="flex items-center justify-between p-5 shadow-sm">
+    <div className="shadow-sm">
+      <div className="flex items-center justify-between p-5">
         <Image
           src={"/logo.svg"}
           width={100}
