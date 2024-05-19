@@ -151,13 +151,14 @@ const MeetingEventList = () => {
           </div>
         ))
       ) : (
-        <div className="p-1 text-gray-500">
+        <div className="p-3 text-gray-400">
+          <h2>Instructions:</h2>
           <p>
-            Click on the create button to create your first meeting so that
+            - Click on the create button to create your first meeting so that
             others can book slots accordingly.
           </p>
           <p>
-            You can also click the availability button to choose which dates you are available so that other's won't book slots on that day.
+            - You can also click the availability button to choose which dates you are available so that other's won't book slots on that day.
           </p>
         </div>
       )}
