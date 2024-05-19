@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Screenshot 2024-05-19 at 11 41 30 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/3840c6a4-73ab-4485-b372-25093ad6f49d)This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -34,3 +34,32 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+Login page:
+![Screenshot 2024-05-19 at 11 11 31 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/0496f70f-da1e-41b7-9aad-03f222a28e7a)
+
+
+DashBoard:
+![Screenshot 2024-05-19 at 11 41 30 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/aa12add3-462f-4571-8224-2616ccb6c53f)
+
+
+Business name creation:
+![Screenshot 2024-05-19 at 11 13 30 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/8cda519e-3ca3-4d55-a771-6ebfb935b91e)
+
+Avaliability page:
+![Screenshot 2024-05-19 at 11 26 55 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/5be3f318-f8ee-4daa-8e30-337c8d73596c)
+
+
+You can copy the link from the dashboard and share it with whoever you want to schedule a meeting with and they can book their convenient slot 
+![Screenshot 2024-05-19 at 11 30 40 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/1d12c2c0-86ef-4d04-bb99-68c00623b525)
+
+Enter details:
+![Screenshot 2024-05-19 at 11 31 24 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/569f02c9-a365-4123-a763-85e2c0adbb3f)
+
+
+View Scheduled meetings:
+![Screenshot 2024-05-19 at 11 31 43 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/7a30c28c-553e-47f2-93ad-6e6e20d9cf4c)
+
+
+
