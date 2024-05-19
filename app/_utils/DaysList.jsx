@@ -1,24 +1,24 @@
 export default [
     {
-        days:"Sunday"
+        day:"Sunday"
     },
     {
-        days:"Monday"
+        day:"Monday"
     },
     {
-        days:"Tuesday"
+        day:"Tuesday"
     },
     {
-        days:"Wednesday"
+        day:"Wednesday"
     },
     {
-        days:"Thursday"
+        day:"Thursday"
     },
     {
-        days:"Friday"
+        day:"Friday"
     },
     {
-        days:"Saturday"
+        day:"Saturday"
     },
     
 ]

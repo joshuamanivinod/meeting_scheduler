@@ -38,7 +38,7 @@ const Availability = () => {
     },
     {
       Saturday: false,
-    },
+    }
   );
   const [startTime, setStartTime] = useState();
   const [endTime, setEndTime] = useState();
@@ -58,21 +58,21 @@ const Availability = () => {
     setEndTime(result.endTime);
   };
 
-  const onHandleChange = (days, value) => {
+  const onHandleChange = (day, value) => {
     setDaysAvailable({
       ...daysAvailable,
-      [days]: value,
+      [day]: value,
     });
     console.log(daysAvailable);
   };
 
   const handleSave = async () => {
     console.log(daysAvailable, startTime, endTime);
-    const docRef = doc(db, "Business", user?.email);
+    const docRef = doc(db, "Business", user.email);
     await updateDoc(docRef, {
       daysAvailable: daysAvailable,
       startTime: startTime,
-      endTime:endTime,
+      endTime: endTime,
     }).then((resp) => {
       // console.log("I reached here")
       toast("Changes Updated!");
@@ -92,21 +92,22 @@ const Availability = () => {
           <h2 className="font-bold">Availability Days</h2>
           {/* grid grid-cols-2 md:grid-cols-4 */}
           <div className="flex flex-col gap-3 my-3">
-            {DaysList.map((item, index) => (
-              <div key={index}>
-                <h2>
-                  <Checkbox
-                    onCheckedChange={(e) => onHandleChange(item.days, e)}
-                    checked={
-                      daysAvailable[item.days]
-                        ? daysAvailable[item.days]
-                        : false
-                    }
-                  />{" "}
-                  {item.days}
-                </h2>
-              </div>
-            ))}
+            {DaysList &&
+              DaysList.map((item, index) => (
+                <div key={index}>
+                  <h2>
+                    <Checkbox
+                      onCheckedChange={(e) => onHandleChange(item.day, e)}
+                      checked={
+                        daysAvailable[item.day]
+                          ? daysAvailable[item.day]
+                          : false
+                      }
+                    />{" "}
+                    {item.day}
+                  </h2>
+                </div>
+              ))}
           </div>
         </div>
         {/* Availability Time */}
