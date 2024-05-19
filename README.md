@@ -1,4 +1,4 @@
-![Screenshot 2024-05-19 at 11 41 30 PM](https://github.com/joshuamanivinod/meeting_scheduler/assets/110624716/3840c6a4-73ab-4485-b372-25093ad6f49d)This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
