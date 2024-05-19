@@ -50,7 +50,7 @@ const Availability = () => {
   }, [user]);
 
   const getBusinessInfo = async () => {
-    const docRef = doc(db, "Business", user?.email);
+    const docRef = doc(db, "Business", user.email);
     const docSnap = await getDoc(docRef);
     const result = docSnap.data();
     setDaysAvailable(result.daysAvailable);
@@ -68,7 +68,7 @@ const Availability = () => {
 
   const handleSave = async () => {
     console.log(daysAvailable, startTime, endTime);
-    const docRef = doc(db, "Business", user.email);
+    const docRef = doc(db, "Business", user?.email);
     await updateDoc(docRef, {
       daysAvailable: daysAvailable,
       startTime: startTime,
@@ -80,64 +80,54 @@ const Availability = () => {
   };
 
   return (
-    <div>
-      <h2 className="font-bold text-2xl p-10">Availability</h2>
-      <hr className="my-7" />
-
-      <div className="md:flex pb-7">
-        {" "}
-        {/*  */}
-        {/* Availability Days */}
-        <div className="px-10 py-3">
-          <h2 className="font-bold">Availability Days</h2>
-          {/* grid grid-cols-2 md:grid-cols-4 */}
-          <div className="flex flex-col gap-3 my-3">
-            {DaysList &&
-              DaysList.map((item, index) => (
-                <div key={index}>
-                  <h2>
-                    <Checkbox
-                      onCheckedChange={(e) => onHandleChange(item.day, e)}
-                      checked={
-                        daysAvailable[item.day]
-                          ? daysAvailable[item.day]
-                          : false
-                      }
-                    />{" "}
-                    {item.day}
-                  </h2>
-                </div>
-              ))}
-          </div>
+    <div className="p-10">
+      <h2 className="font-bold text-2xl">Availability</h2>
+      <hr className="my-7"></hr>
+      <div>
+        <h2 className="font-bold">Availability Days</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 my-3">
+          {DaysList &&
+            DaysList.map((item, index) => (
+              <div key={index}>
+                <h2>
+                  <Checkbox
+                    checked={
+                      daysAvailable && daysAvailable[item?.day]
+                        ? daysAvailable[item?.day]
+                        : false
+                    }
+                    onCheckedChange={(e) => onHandleChange(item.day, e)}
+                  />{" "}
+                  {item.day}
+                </h2>
+              </div>
+            ))}
         </div>
-        {/* Availability Time */}
-        <div className="px-10 py-3">
-          <h2 className="font-bold">Availability Time</h2>
-          <div className="flex gap-10">
-            <div className="mt-3">
-              <h2>Start Time</h2>
-              <Input
-                type="time"
-                onChange={(e) => setStartTime(e.target.value)}
-                defaultValue={startTime}
-              />
-            </div>
-            <div className="mt-3 ">
-              <h2>End Time</h2>
-              <Input
-                type="time"
-                onChange={(e) => setEndTime(e.target.value)}
-                defaultValue={endTime}
-              />
-            </div>
+      </div>
+      <div>
+        <h2 className="font-bold mt-10">Availability Time</h2>
+        <div className="flex gap-10">
+          <div className="mt-3">
+            <h2>Start Time</h2>
+            <Input
+              type="time"
+              defaultValue={startTime}
+              onChange={(e) => setStartTime(e.target.value)}
+            />
           </div>
-          <div className="flex mt-2">
-            <Button className="mt-8 px-10" onClick={handleSave}>
-              Save
-            </Button>
+          <div className="mt-3">
+            <h2>End Time</h2>
+            <Input
+              type="time"
+              defaultValue={endTime}
+              onChange={(e) => setEndTime(e.target.value)}
+            />
           </div>
         </div>
       </div>
+      <Button className="mt-10" onClick={handleSave}>
+        Save
+      </Button>
     </div>
   );
 };
