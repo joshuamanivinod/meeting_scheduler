@@ -23,7 +23,7 @@ const Hero = () => {
             <div className="flex justify-center gap-2 md:gap-8 px-2">
               <LoginLink>
                 <Button className="py-5 px-7 md:p-7 flex gap-4">
-                  <Image src={"/Google.png"} width={30} height={30}></Image>
+                  <Image src={"/google.png"} width={30} height={30}></Image>
                   Sign up with Google           
                 </Button>
               </LoginLink>
