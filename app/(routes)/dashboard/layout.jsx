@@ -1,6 +1,6 @@
 import React from "react";
-import SideNavBar from "./_components/sidenavbar";
-import DashboardHeader from "./_components/dashboardHeader";
+// import SideNavBar from "./_components/sidenavbar";
+// import DashboardHeader from "./_components/dashboardHeader";
 import { Toaster } from "@/components/ui/sonner";
 import {
   Sheet,
@@ -11,6 +11,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
+import SideNavBar from "./_components/SideNavBar";
+import DashboardHeader from "./_components/DashboardHeader";
 
 const DashboardLayout = ({ children }) => {
   return (

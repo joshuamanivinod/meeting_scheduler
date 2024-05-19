@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import MeetingTimeDateSelection from "../_components/meetingTimeDateSelection";
-import MeetingTimeDateSelection from '../_components/MeetingTimeDateSelection'
 import {
   collection,
   doc,
@@ -12,6 +10,7 @@ import {
   where,
 } from "firebase/firestore";
 import { app } from "@/config/FirebaseConfig";
+import MeetingTimeDateSelection from "../_components/MeetingTimeDateSelection";
 
 const SharedMeetingEvent = ({ params }) => {
   const db = getFirestore(app);
