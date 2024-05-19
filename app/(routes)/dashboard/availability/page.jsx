@@ -17,7 +17,7 @@ import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { toast } from "sonner";
 
 const Availability = () => {
-  const [daysAvailable, setDaysAvailable] = useState([
+  const [daysAvailable, setDaysAvailable] = useState(
     {
       Sunday: false,
     },
@@ -39,7 +39,7 @@ const Availability = () => {
     {
       Saturday: false,
     },
-  ]);
+  );
   const [startTime, setStartTime] = useState();
   const [endTime, setEndTime] = useState();
   const db = getFirestore(app);
@@ -72,8 +72,7 @@ const Availability = () => {
     await updateDoc(docRef, {
       daysAvailable: daysAvailable,
       startTime: startTime,
-      endTime,
-      endTime,
+      endTime:endTime,
     }).then((resp) => {
       // console.log("I reached here")
       toast("Changes Updated!");
