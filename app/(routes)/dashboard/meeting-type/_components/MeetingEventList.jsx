@@ -80,20 +80,20 @@ const MeetingEventList = () => {
 
   return (
     <div className="mt-10 grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-      {eventList.length > 0
-        ? eventList?.map((event, index) => (
-            <div
-              className="border shadow-md border-t-8 rounded-lg p-5 flex flex-col gap-3"
-              style={{ borderTopColor: event?.themeColor }}
-            >
-              <div className=" flex justify-end">
-                <div
-                  className="flex gap-2 cursor-pointer"
-                  onClick={() => onDeleteMeetingEvent(event)}
-                >
-                  <Trash2 />
-                </div>
-                {/* <DropdownMenu>
+      {eventList.length > 0 ? (
+        eventList?.map((event, index) => (
+          <div
+            className="border shadow-md border-t-8 rounded-lg p-5 flex flex-col gap-3"
+            style={{ borderTopColor: event?.themeColor }}
+          >
+            <div className=" flex justify-end">
+              <div
+                className="flex gap-2 cursor-pointer"
+                onClick={() => onDeleteMeetingEvent(event)}
+              >
+                <Trash2 />
+              </div>
+              {/* <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <SettingsIcon className="cursor-pointer" />
                   </DropdownMenuTrigger>
@@ -109,48 +109,58 @@ const MeetingEventList = () => {
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu> */}
-              </div>
-              <h2 className="font-medium text-xl">{event?.eventName}</h2>
-              <div className="flex justify-between">
-                <h2 className="flex gap-2 text-gray-500">
-                  <Clock /> {event?.duration} Min
-                </h2>
-                <h2 className="flex gap-2 text-gray-500">
-                  <MapPin /> {event?.locationType}
-                </h2>
-              </div>
-              <hr />
-              <div className="flex justify-between">
-                <h2
-                  className="flex gap-2 text-sm items-center text-primary cursor-pointer"
-                  onClick={() => {
-                    onCopyClickHandler(event);
-                    // navigator.clipboard.writeText(event?.locationUrl);
-                    // toast("Copied to clipboard");
-                  }}
-                >
-                  <Copy className="h-4 w-4" /> Copy Link
-                </h2>
-                <Button
-                  variant="outline"
-                  className="border-primary rounded-full text-primary"
-                  onClick={() => {
-                    router.replace(
-                      process.env.NEXT_PUBLIC_BASE_URL +
-                        "/" +
-                        businessInfo.businessName +
-                        "/" +
-                        event.id
-                    );
-                    // onCopyClickHandler(event);
-                  }}
-                >
-                  Share
-                </Button>
-              </div>
             </div>
-          ))
-        : "Loading..."}
+            <h2 className="font-medium text-xl">{event?.eventName}</h2>
+            <div className="flex justify-between">
+              <h2 className="flex gap-2 text-gray-500">
+                <Clock /> {event?.duration} Min
+              </h2>
+              <h2 className="flex gap-2 text-gray-500">
+                <MapPin /> {event?.locationType}
+              </h2>
+            </div>
+            <hr />
+            <div className="flex justify-between">
+              <h2
+                className="flex gap-2 text-sm items-center text-primary cursor-pointer"
+                onClick={() => {
+                  onCopyClickHandler(event);
+                  // navigator.clipboard.writeText(event?.locationUrl);
+                  // toast("Copied to clipboard");
+                }}
+              >
+                <Copy className="h-4 w-4" /> Copy Link
+              </h2>
+              <Button
+                variant="outline"
+                className="border-primary rounded-full text-primary"
+                onClick={() => {
+                  router.replace(
+                    process.env.NEXT_PUBLIC_BASE_URL +
+                      "/" +
+                      businessInfo.businessName +
+                      "/" +
+                      event.id
+                  );
+                  // onCopyClickHandler(event);
+                }}
+              >
+                Share
+              </Button>
+            </div>
+          </div>
+        ))
+      ) : (
+        <div className="p-1 text-gray-500">
+          <p>
+            Click on the create button to create your first meeting so that
+            others can book slots accordingly.
+          </p>
+          <p>
+            You can also click the availability button to choose which dates you are available so that other's won't book slots on that day.
+          </p>
+        </div>
+      )}
     </div>
   );
 };
