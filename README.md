@@ -35,6 +35,12 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## About:
+- A web application to Coordinate, Book and Confirm multiple meetings all at one place
+- Created centralized hub for coordinators to schedule meetings, while participants seamlessly book their slots and receive instant confirmation via email
+- scheduling automation platform for eliminating the back-and-forth emails to find the perfect time
+
+
 ## Overview:
 
 Login page:
